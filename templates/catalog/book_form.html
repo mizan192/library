@@ -1,12 +1,7 @@
-{% extends "base_generic.html" %}
-
+{% extends "base_generic.html" %} 
 {% block content %}
-
-    <form action="" method="post" class="form">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-        <input type="submit" value="Submit"/>
-
-    </form>
+<form action="" method="post" class="form submit-form">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</form>
 {% endblock %}

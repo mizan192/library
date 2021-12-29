@@ -15,36 +15,43 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+
 </head>
  <!-- Add additional CSS in static file -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
 
-        {% block style %}
-        {% endblock %}
+        /* {% block style %}
+        {% endblock %} */
 
-        body {
+         body {
             background: url("{% static 'books-library-students-12064.jpg' %}");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: 100% 100%;
 
-        }
+         } 
+
+        
+    
     </style>
 </head>
 <body>
 
 
-<div class="container-fluid my-auto">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{% url 'index' %}">MY LIBRARY </a>
+<div class="container-fluid my-auto header">
+    <nav class="navList navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="my-library navbar-brand" href="{% url 'index' %}">MY LIBRARY </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto ul-list">
 
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'books' %}">Books</a>
@@ -72,6 +79,11 @@
                 {% endif %}
                 </li>
                     {% if user.is_authenticated %}
+
+
+
+
+
 <div class="dropdown float">
     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
       {{ request.user }}
@@ -95,18 +107,20 @@
 
 
     <br>
-    <div class="row mt-5 mx-auto">
-        <div class="col-sm-10">
+    <div class="back-div row mt-5 mx-auto">
+        <div class="welcome-msg col-sm-10">
             {% block content %}{% endblock %}
 
-
+           
         </div>
     </div>
 
 </div>
 </body>
-<script>
+
+<!-- <script>
 {% block javascript %}
+
 {% endblock %}
-</script>
+</script> -->
 </html>

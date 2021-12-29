@@ -1,11 +1,22 @@
-{% extends "base_generic.html" %}
+{% extends "base_generic.html" %} {% block content %}
+<style>
+  h1 {
+    color: seashell;
+  }
+  .div-cont {
+    margin: auto;
+    margin-right: 40px;
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(65, 47, 29);
+  }
+</style>
+<div class="div-cont container bg">
+  <center>
+    <h1>WELCOME TO</h1>
+    <h1>Library Management System</h1>
+  </center>
+</div>
 
-{% block content %}
-    <div class="container bg bg-white">
-        <center>
-            <H1>
-               WELCOME To Library Management System
-            </H1>
-    </div>
-    </center>
 {% endblock %}
