@@ -15,6 +15,13 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- new add  -->
+<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
 
     <!-- {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
@@ -115,12 +122,61 @@
         </div>
     </div>
 
+    <!-- search book  -->
+
+    <div>
+<h2 class="text-center text-success m-5">Search Your Favorite Book</h2>
+    <div class="input-group mb-3 w-50 mx-auto">
+      <input
+        id="serach-field"
+        type="text"
+        class="form-control"
+        placeholder="Search the book you want"
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+      />
+      <button
+        onclick="searchBook()"
+        class="btn btn-outline-secondary"
+        type="button"
+        id="button-search"
+      >
+        Search
+      </button>
+    </div>
+
+    <!-- invaild book name handle -->
+    <div id="invalid-book-name" class="bg-danger text-white"></div>
+
+    <!-- total book count -->
+    <div id="total-book" class=""></div>
+
+    <!-- book search result  -->
+    <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4"></div>
+
+    <!-- end of body part  -->
+    <!-- bootstrap script link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+   
+   
+
+    </div>
+
+
+
 </div>
 </body>
 
-<!-- <script>
-{% block javascript %}
+<!-- <script> -->
+{%block javascript%}
+
+    <script src="{% static 'js/app.js' %}"></script>
 
 {% endblock %}
-</script> -->
+<!-- </script> -->
+
 </html>
